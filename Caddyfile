@@ -1,0 +1,10 @@
+http://0.0.0.0:8080
+{
+	root /wwwroot
+	index index.html
+	timeouts none
+	proxy /peng ssv2.us-south.cf.appdomain.cloud {
+		websocket
+		header_upstream -Origin
+	}
+}
